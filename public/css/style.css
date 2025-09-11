@@ -5,6 +5,7 @@
 body{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #222;
 }
 
 .navbar{
@@ -16,7 +17,18 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    z-index: 100000;
+    position: relative;
+}
 
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #008eb9;
+}
+.logo img{
+    width: 30px;
 }
 
 .menu{
@@ -24,9 +36,14 @@ body{
     list-style: none;
     gap: 40px;
 }
+.menu li{
+    padding: 4px;
+}
 .menu li hr{
     width: 0;
     transition: .4s;
+    height: 1px;
+    background-color: #222;
     border: none;
 }
 .menu li a{
@@ -34,6 +51,110 @@ body{
     color: #222;
 }
 .menu li:hover hr{
+    width: 100%;   
+}
+.menu li button{
+    background: transparent;
+    border: none;
+}
+
+
+.conteiner{
+    position: relative;
     width: 100%;
-    border: 1px solid #222;
+    height: fit-content;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(1px 1px 40px #000);
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+}
+.hide{
+    opacity: 0;
+    transition: 1s;
+}
+
+.conteudo{
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.hero{
+    max-width: 45%;
+    animation-name: anyleft;
+    animation-duration: 1s;
+    /* background-color: #fff; */
+}
+@keyframes anyleft{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.hero img{
+    width: 100%;
+}
+.hero p{
+    color: #f9fcfc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+.card{
+    width: 350px;
+    height: 400px;
+    background-color: #c1e5f03b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    backdrop-filter: blur(8px);
+    color: #fff;
+    border-radius: 10px;
+}
+.card h1{
+    font-size: 5rem;
+    font-weight: lighter;
+}
+.card p{
+    font-size: 1.3rem;
+}
+
+.list-conteiner{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+
+}
+
+.card-list{
+    padding: 25px 35px;
+    background: linear-gradient(#363636, #141a1c);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px #000;
+    color: #fff;
+    font-weight: lighter;
+}
+.list-card{
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 40px;
 }
