@@ -15,10 +15,10 @@ var weatherData = {
     temperatura: null,
     umidade: null,
 }
-//res.sendFile(__dirname + 'public/index.html') ||
+
 
 app.get('/', (req, res) => {
-     res.send("o problema é no public");
+    res.sendFile(__dirname + 'public/index.html');
 });
 
 
