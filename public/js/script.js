@@ -35,8 +35,13 @@ setInterval( async () => {
     const message = document.createElement('p');
             
     if(jsonResponse.data.length){
-        if(pai.contains(message)){
-            pai.replaceChildren();
+        const message = document.getElementById('message');
+        if(message){
+            pai.removeChild(message);
+        }
+        
+        if(pai.children.length > 5){
+            pai.removeChild(pai.lastElementChild);
         }
 
         jsonResponse.data.forEach(clima => {
@@ -63,6 +68,7 @@ setInterval( async () => {
         message.style.fontFamily = "Arial";
         message.style.color = "#fff";
         message.style.fontSize = "2.3rem";
+        message.id = "message";
         pai.appendChild(message);
     }
 }, 5000);
