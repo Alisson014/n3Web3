@@ -32,9 +32,10 @@ setInterval( async () => {
     const pai = document.getElementById('list-card');
 
     console.log(jsonResponse);
+    const message = document.createElement('p');
             
     if(jsonResponse.data.length){
-        pai.replaceChildren();
+        pai.removeChild(message);
 
         jsonResponse.data.forEach(clima => {
             const card = document.createElement('article');
@@ -56,7 +57,6 @@ setInterval( async () => {
         });
     } else{
         pai.replaceChildren();
-        const message = document.createElement('p');
         message.innerHTML = "Aguardando dados...";
         message.style.fontFamily = "Arial";
         message.style.color = "#fff";
