@@ -35,7 +35,9 @@ setInterval( async () => {
     const message = document.createElement('p');
             
     if(jsonResponse.data.length){
-        pai.removeChild(message);
+        if(pai.childNodes.includes(message)){
+            pai.replaceChildren();
+        }
 
         jsonResponse.data.forEach(clima => {
             const card = document.createElement('article');
