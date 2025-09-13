@@ -33,10 +33,10 @@ setInterval( async () => {
 
     console.log(jsonResponse);
             
-    if(jsonResponse.clima.length){
+    if(jsonResponse.data.length){
         pai.replaceChildren();
 
-        jsonResponse.clima.forEach(clima => {
+        jsonResponse.data.forEach(clima => {
             const card = document.createElement('article');
             const img = document.createElement('img');
             const h1 = document.createElement('h1');
