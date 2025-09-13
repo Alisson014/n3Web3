@@ -55,6 +55,7 @@ setInterval( async () => {
             pai.appendChild(card);
         });
     } else{
+        pai.replaceChildren();
         const message = document.createElement('p');
         message.innerHTML = "Aguardando dados...";
         message.style.fontFamily = "Arial";
