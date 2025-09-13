@@ -35,7 +35,7 @@ app.get('/RegisterWeatherData', (req, res) => {
     res.json({message: "registrado com sucesso!"});
 });
 
-app.get('weatherData', (req, res) => {
+app.get('/weatherData', (req, res) => {
     res.json({ data: dataList });
 });
 
