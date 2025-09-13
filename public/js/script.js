@@ -39,8 +39,9 @@ setInterval( async () => {
         if(message){
             pai.removeChild(message);
         }
+
         
-        if(pai.children.length > 5){
+        if(pai.childElementCount > 5){
             pai.removeChild(pai.lastElementChild);
         }
 
