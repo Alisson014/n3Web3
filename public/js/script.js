@@ -11,11 +11,11 @@ var bg2On = false;
 
 setInterval(() => {
     if(bg2On){
-        bg2.src = bgs[index];
+        bg1.src = bgs[index];
         bg2.classList.remove("hide");
     } else{
         bg2.classList.add("hide");
-        bg1.src = bgs[index];
+        bg2.src = bgs[index];
     }
 
     index ++;
