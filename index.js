@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/weatherData', (req, res) => {
+app.get('/RegisterWeatherData', (req, res) => {
     weatherData.temperatura = req.query.temp || 14.0;
     weatherData.umidade = req.query.umid || 80.0;
 
@@ -32,7 +32,11 @@ app.get('/weatherData', (req, res) => {
         dataList.shift();
     }
 
-    res.json({clima: dataList});
+    res.json({message: "registrado com sucesso!"});
+});
+
+app.get('weatherData', (req, res) => {
+    res.json({ data: dataList });
 });
 
 const port = process.env.PORT || 3001;
