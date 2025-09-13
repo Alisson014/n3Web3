@@ -35,7 +35,7 @@ setInterval( async () => {
     const message = document.createElement('p');
             
     if(jsonResponse.data.length){
-        if(pai.childNodes.includes(message)){
+        if(pai.contains(message)){
             pai.replaceChildren();
         }
 
